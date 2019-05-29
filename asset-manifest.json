@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "//ryandadeng.github.io/burger-king/static/css/main.364eaa20.chunk.css",
-    "main.js": "//ryandadeng.github.io/burger-king/static/js/main.23fd892b.chunk.js",
-    "main.js.map": "//ryandadeng.github.io/burger-king/static/js/main.23fd892b.chunk.js.map",
-    "runtime~main.js": "//ryandadeng.github.io/burger-king/static/js/runtime~main.d12451a7.js",
-    "runtime~main.js.map": "//ryandadeng.github.io/burger-king/static/js/runtime~main.d12451a7.js.map",
-    "static/js/2.d47cbed6.chunk.js": "//ryandadeng.github.io/burger-king/static/js/2.d47cbed6.chunk.js",
-    "static/js/2.d47cbed6.chunk.js.map": "//ryandadeng.github.io/burger-king/static/js/2.d47cbed6.chunk.js.map",
-    "index.html": "//ryandadeng.github.io/burger-king/index.html",
-    "precache-manifest.4c6bf473ed27079049109a5181623b99.js": "//ryandadeng.github.io/burger-king/precache-manifest.4c6bf473ed27079049109a5181623b99.js",
-    "service-worker.js": "//ryandadeng.github.io/burger-king/service-worker.js",
-    "static/css/main.364eaa20.chunk.css.map": "//ryandadeng.github.io/burger-king/static/css/main.364eaa20.chunk.css.map",
-    "static/media/burger-logo.png": "//ryandadeng.github.io/burger-king/static/media/burger-logo.b8503d26.png"
+    "main.css": "/burger-king/static/css/main.08c92f4f.chunk.css",
+    "main.js": "/burger-king/static/js/main.de26448c.chunk.js",
+    "main.js.map": "/burger-king/static/js/main.de26448c.chunk.js.map",
+    "runtime~main.js": "/burger-king/static/js/runtime~main.97d812ca.js",
+    "runtime~main.js.map": "/burger-king/static/js/runtime~main.97d812ca.js.map",
+    "static/js/2.5fe6e347.chunk.js": "/burger-king/static/js/2.5fe6e347.chunk.js",
+    "static/js/2.5fe6e347.chunk.js.map": "/burger-king/static/js/2.5fe6e347.chunk.js.map",
+    "index.html": "/burger-king/index.html",
+    "precache-manifest.3e58cdadf2066b64381ff6325961f738.js": "/burger-king/precache-manifest.3e58cdadf2066b64381ff6325961f738.js",
+    "service-worker.js": "/burger-king/service-worker.js",
+    "static/css/main.08c92f4f.chunk.css.map": "/burger-king/static/css/main.08c92f4f.chunk.css.map",
+    "static/media/burger-logo.png": "/burger-king/static/media/burger-logo.b8503d26.png"
   }
 }
