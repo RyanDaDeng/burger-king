@@ -18,6 +18,6 @@ function BuildControl({disabled, label, removed, added}) {
             </button>
         </div>
     )
-};
+}
 
 export default BuildControl;
