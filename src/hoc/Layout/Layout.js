@@ -21,13 +21,13 @@ class Layout extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <>
                 <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler}/>
                 <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler}/>
                 <main className={styles.Content}>
                     {this.props.children}
                 </main>
-            </React.Fragment>
+            </>
         )
     }
 }
