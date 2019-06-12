@@ -3,6 +3,7 @@ import styles from './Toolbar.module.css';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
+import ShoppingCart from "../../ShoppingCart/ShoppingCart";
 
 const toolbar = (props) => (
     <header className={styles.Toolbar}>
@@ -10,6 +11,7 @@ const toolbar = (props) => (
         <div className={styles.Logo}>
             <Logo/>
         </div>
+        <ShoppingCart/>
 
         <nav className={styles.DesktopOnly}>
             <NavigationItems/>

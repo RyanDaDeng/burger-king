@@ -36,16 +36,15 @@ class BurgerBuilder extends Component {
         // });
     }
 
-    updatePurchaseState ( ingredients ) {
-        const sum = Object.keys( ingredients )
-            .map( igKey => {
-                return ingredients[igKey];
-            } )
-            .reduce( ( sum, el ) => {
-                return sum + el;
-            }, 0 );
-        return sum > 0;
+    updatePurchaseState(ingredients) {
+        const totalQuantity = Object.values(ingredients).reduce((sum, el) => {
+            return sum + el;
+        }, 0);
+
+        console.log(totalQuantity);
+        return totalQuantity > 0;
     }
+
 
     purchaseHandler = () => {
         this.setState({purchasing: true});
@@ -56,6 +55,7 @@ class BurgerBuilder extends Component {
     };
 
     purchaseContinueHandler = () => {
+        console.log('22')
         this.props.history.push({
             pathname: '/checkout'
         });
@@ -83,7 +83,7 @@ class BurgerBuilder extends Component {
                         ingredientRemoved={this.props.onIngredientRemoved}
                         canPurchase={this.updatePurchaseState(this.props.ingredients)}
                         price={this.props.totalPrice}
-                        ordered={this.purchasehisdler}
+                        ordered={this.purchaseHandler}
                     />
                 </>
             );
