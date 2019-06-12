@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/burger-king/static/css/main.4a0195d3.chunk.css",
-    "main.js": "/burger-king/static/js/main.e46fe8f3.chunk.js",
-    "main.js.map": "/burger-king/static/js/main.e46fe8f3.chunk.js.map",
+    "main.css": "/burger-king/static/css/main.5b1eb4c1.chunk.css",
+    "main.js": "/burger-king/static/js/main.3e08d8c6.chunk.js",
+    "main.js.map": "/burger-king/static/js/main.3e08d8c6.chunk.js.map",
     "runtime~main.js": "/burger-king/static/js/runtime~main.97d812ca.js",
     "runtime~main.js.map": "/burger-king/static/js/runtime~main.97d812ca.js.map",
-    "static/js/2.90e19f70.chunk.js": "/burger-king/static/js/2.90e19f70.chunk.js",
-    "static/js/2.90e19f70.chunk.js.map": "/burger-king/static/js/2.90e19f70.chunk.js.map",
+    "static/js/2.35a32324.chunk.js": "/burger-king/static/js/2.35a32324.chunk.js",
+    "static/js/2.35a32324.chunk.js.map": "/burger-king/static/js/2.35a32324.chunk.js.map",
     "index.html": "/burger-king/index.html",
-    "precache-manifest.5006fb5e96200eb1dfa7dd27ddec7450.js": "/burger-king/precache-manifest.5006fb5e96200eb1dfa7dd27ddec7450.js",
+    "precache-manifest.0cf22e56e0a16ef2ff9c7a79b2b03cc8.js": "/burger-king/precache-manifest.0cf22e56e0a16ef2ff9c7a79b2b03cc8.js",
     "service-worker.js": "/burger-king/service-worker.js",
-    "static/css/main.4a0195d3.chunk.css.map": "/burger-king/static/css/main.4a0195d3.chunk.css.map",
+    "static/css/main.5b1eb4c1.chunk.css.map": "/burger-king/static/css/main.5b1eb4c1.chunk.css.map",
     "static/media/burger-logo.png": "/burger-king/static/media/burger-logo.b8503d26.png"
   }
 }
