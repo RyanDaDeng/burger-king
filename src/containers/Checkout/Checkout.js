@@ -4,27 +4,9 @@ import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSumm
 
 import {Route} from 'react-router-dom';
 import ContactData from "./ContactData/ContactData";
+import {connect} from "react-redux";
 
 class Checkout extends Component {
-    state = {
-        ingredients: null,
-        totalPrice: 0
-    };
-
-    componentWillMount() {
-        const query = new URLSearchParams(this.props.location.search);
-        const ingredients = {};
-        let price = 0;
-        for (let param of query.entries()) {
-            if (param[0] === 'price') {
-                price = param[1];
-            } else {
-                ingredients[param[0]] = +param[1];
-            }
-
-        }
-        this.setState({ingredients: ingredients, totalPrice: price});
-    }
 
     checkoutCancelledHandler = () => {
         this.props.history.goBack();
@@ -39,14 +21,24 @@ class Checkout extends Component {
             <div>
                 <CheckoutSummary onCheckoutCancelled={this.checkoutCancelledHandler}
                                  onCheckoutContinued={this.checkoutContinuedHandler}
-                                 ingredients={this.state.ingredients}>
+                                 ingredients={this.props.ingredients}>
                 </CheckoutSummary>
                 <Route path={this.props.match.path + '/contact-data'}
-                       render={() => (
-                           <ContactData ingredients={this.state.ingredients} totalPrice={this.state.totalPrice}/>)}/>
+                       component={ContactData}/>
             </div>
+
+        //     <Route path={this.props.match.path + '/contact-data'}
+        // render={() => (
+        //     <ContactData ingredients={this.props.ingredients} totalPrice={this.props.totalPrice}/>)}/>
         )
     }
 }
 
-export default Checkout;
+const mapStateToProps = state => {
+    return {
+        ingredients: state.ingredients,
+        totalPrice: state.totalPrice
+    }
+};
+
+export default connect(mapStateToProps)(Checkout);

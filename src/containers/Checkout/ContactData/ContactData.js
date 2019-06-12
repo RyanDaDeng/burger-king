@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
@@ -6,6 +6,7 @@ import classes from './ContactData.module.css';
 import Input from '../../../components/UI/Input/Input';
 import axiosOrders from "../../../api/axios-orders";
 import {withRouter} from 'react-router-dom';
+import {connect} from "react-redux";
 
 class ContactData extends Component {
     state = {
@@ -97,9 +98,9 @@ class ContactData extends Component {
         loading: false
     }
 
-    orderHandler = ( event ) => {
+    orderHandler = (event) => {
         event.preventDefault();
-        this.setState( { loading: true } );
+        this.setState({loading: true});
         const formData = {};
         for (let formElementIdentifier in this.state.orderForm) {
             formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
@@ -108,15 +109,15 @@ class ContactData extends Component {
             ingredients: this.props.ingredients,
             price: this.props.totalPrice,
             orderData: formData
-        }
-        axiosOrders.post( '/orders.json', order )
-            .then( response => {
-                this.setState( { loading: false } );
-                this.props.history.push( '/' );
-            } )
-            .catch( error => {
-                this.setState( { loading: false } );
-            } );
+        };
+        axiosOrders.post('/orders.json', order)
+            .then(response => {
+                this.setState({loading: false});
+                this.props.history.push('/');
+            })
+            .catch(error => {
+                this.setState({loading: false});
+            });
     }
 
     checkValidity(value, rules) {
@@ -169,7 +170,7 @@ class ContactData extends Component {
         this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
     }
 
-    render () {
+    render() {
         const formElementsArray = [];
         for (let key in this.state.orderForm) {
             formElementsArray.push({
@@ -188,13 +189,13 @@ class ContactData extends Component {
                         invalid={!formElement.config.valid}
                         shouldValidate={formElement.config.validation}
                         touched={formElement.config.touched}
-                        changed={(event) => this.inputChangedHandler(event, formElement.id)} />
+                        changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
                 ))}
                 <Button btnType="Success" disabled={!this.state.formIsValid}>ORDER</Button>
             </form>
         );
-        if ( this.state.loading ) {
-            form = <Spinner />;
+        if (this.state.loading) {
+            form = <Spinner/>;
         }
         return (
             <div className={classes.ContactData}>
@@ -205,4 +206,11 @@ class ContactData extends Component {
     }
 }
 
-export default withRouter(ContactData);
+
+const mapStateToProps = state => {
+    return {
+        ingredients: state.ingredients,
+        totalPrice: state.totalPrice
+    }
+};
+export default connect(mapStateToProps)(withRouter(ContactData));
